@@ -597,6 +597,26 @@ CookieId=ACE4228DB5864E87`
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-700 bg-gray-800/50 backdrop-blur-sm mt-16">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-orange-400">Ultimate News Web Media Production PVT LTD</h3>
+              <p className="text-gray-400 text-sm mt-1">Professional Broadcasting Solutions</p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Ultimate News Web Media Production PVT LTD. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Powered by Next.js 15 • Built with ❤️ for the streaming community
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
