@@ -72,6 +72,70 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to see your application running.
 
+## 🎯 Current Application: OBS Studio Profile Generator
+
+This project has been configured as a professional **OBS Studio Profile Generator** with a broadcast-themed UI. The application allows streamers and content creators to generate OBS Studio configuration files through an intuitive web interface.
+
+### 📺 Features
+
+- **Professional Broadcast UI**: Dark theme optimized for broadcast professionals
+- **Comprehensive Configuration**: Configure all aspects of OBS Studio profiles
+- **Three-File Generation**: Automatically generates:
+  - `basic.ini` - Main OBS configuration file
+  - `service.json` - Stream service settings
+  - `streamEncoder.json` - Encoder configuration
+- **Real-time Preview**: Live preview of stream settings
+- **One-Click Download**: Download all configuration files at once
+
+### 🎛️ Configuration Options
+
+- **Basic Settings**: Profile name, filename formatting, delay settings, reconnection options
+- **Service Settings**: Stream server URL, stream key, authentication
+- **Encoder Settings**: Bitrate, buffer size, profile, tuning options
+- **Audio/Video Settings**: Resolution, FPS, sample rate, channel setup
+
+### 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to access the OBS Studio Profile Generator.
+
+### 📁 API Endpoints
+
+The application includes REST API endpoints for programmatic access:
+
+- `POST /api/obs/basic` - Generate basic.ini configuration
+- `POST /api/obs/service` - Generate service.json configuration  
+- `POST /api/obs/encoder` - Generate streamEncoder.json configuration
+
+### 🌤️ Vercel Deployment
+
+This application is optimized for deployment on Vercel:
+
+1. **Push to GitHub**: Commit your code and push to a GitHub repository
+2. **Connect to Vercel**: Import your repository on Vercel
+3. **Deploy**: Vercel will automatically detect and deploy the Next.js application
+4. **Configure**: Set up environment variables if needed
+
+The application is production-ready with:
+- ✅ Optimized builds
+- ✅ Static asset optimization
+- ✅ API route handling
+- ✅ Responsive design
+- ✅ Professional broadcast theme
+
 ## 🤖 Powered by Z.ai
 
 This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
