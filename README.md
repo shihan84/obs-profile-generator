@@ -1,68 +1,104 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🎙️ OBS Studio Profile Generator
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+A professional web application that generates OBS Studio configuration files with an intuitive, broadcast-themed interface. Perfect for streamers and content creators who need reliable, customizable OBS profiles.
 
-## ✨ Technology Stack
+![OBS Studio Profile Generator](https://img.shields.io/badge/OBS-Studio-orange?style=for-the-badge&logo=obs-studio&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-white?style=for-the-badge&logo=vercel&logoColor=black)
 
-This scaffold provides a robust foundation built with:
+## 🌟 Features
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+### 🎨 Professional Broadcast UI
+- **Orange Gradient Theme**: Professional color scheme from light to dark orange
+- **Dark Mode Optimized**: Perfect for broadcast studio environments
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Interactive Elements**: Smooth animations and professional styling
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+### ⚙️ Comprehensive Configuration System
+- **Basic Settings**: Profile name, filename formatting, delay/reconnection options
+- **Service Settings**: Stream server URL, stream key, authentication configuration
+- **Encoder Settings**: Bitrate, buffer size, H.264 profile, tuning options
+- **Audio/Video Settings**: Resolution, FPS, sample rate, channel configuration
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+### 📄 Three-File Generation
+Automatically generates all required OBS Studio configuration files:
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+1. **`basic.ini`** - Main OBS configuration containing:
+   - General settings and output modes
+   - Recording and streaming parameters
+   - Video and audio base configurations
+   - Panel and interface settings
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+2. **`service.json`** - Stream service settings including:
+   - Server URL and connection details
+   - Authentication parameters
+   - Stream key configuration
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+3. **`streamEncoder.json`** - Encoder configuration with:
+   - Bitrate and buffer settings
+   - H.264 profile and tuning options
+   - Keyframe interval configuration
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### 🚀 Advanced Features
+- **Real-time Preview**: Live stream information display
+- **One-Click Download**: Download all configuration files simultaneously
+- **API Endpoints**: Programmatic access for automation
+- **Production Ready**: Optimized for Vercel deployment
 
-## 🎯 Why This Scaffold?
+## 🛠️ Technology Stack
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### Core Framework
+- **⚡ Next.js 15** - React framework with App Router
+- **📘 TypeScript 5** - Type-safe development
+- **🎨 Tailwind CSS 4** - Utility-first styling
+
+### UI Components
+- **🧩 shadcn/ui** - High-quality accessible components
+- **🎯 Lucide React** - Beautiful icon library
+- **🌈 Framer Motion** - Smooth animations
+
+### Development Tools
+- **🔧 ESLint** - Code quality and consistency
+- **📦 Prisma** - Database ORM (ready for future features)
+- **🔐 NextAuth.js** - Authentication (ready for user accounts)
 
 ## 🚀 Quick Start
 
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/shihan84/obs-profile-generator.git
+
+# Navigate to project directory
+cd obs-profile-generator
+
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
+```
 
+### Usage
+
+1. **Open Application**: Navigate to [http://localhost:3000](http://localhost:3000)
+2. **Configure Settings**: Use the intuitive tabbed interface:
+   - **Basic**: Profile name, delay settings, reconnection options
+   - **Service**: Stream server URL and authentication
+   - **Encoder**: Bitrate, buffer size, H.264 settings
+   - **A/V**: Resolution, FPS, audio configuration
+3. **Preview**: Check real-time stream information
+4. **Download**: Click "Download All Files" to get your configuration
+
+### Production Build
+
+```bash
 # Build for production
 npm run build
 
@@ -70,136 +106,183 @@ npm run build
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+## 📁 API Endpoints
 
-## 🎯 Current Application: OBS Studio Profile Generator
+The application provides REST API endpoints for programmatic access:
 
-This project has been configured as a professional **OBS Studio Profile Generator** with a broadcast-themed UI. The application allows streamers and content creators to generate OBS Studio configuration files through an intuitive web interface.
-
-### 📺 Features
-
-- **Professional Broadcast UI**: Dark theme optimized for broadcast professionals
-- **Comprehensive Configuration**: Configure all aspects of OBS Studio profiles
-- **Three-File Generation**: Automatically generates:
-  - `basic.ini` - Main OBS configuration file
-  - `service.json` - Stream service settings
-  - `streamEncoder.json` - Encoder configuration
-- **Real-time Preview**: Live preview of stream settings
-- **One-Click Download**: Download all configuration files at once
-
-### 🎛️ Configuration Options
-
-- **Basic Settings**: Profile name, filename formatting, delay settings, reconnection options
-- **Service Settings**: Stream server URL, stream key, authentication
-- **Encoder Settings**: Bitrate, buffer size, profile, tuning options
-- **Audio/Video Settings**: Resolution, FPS, sample rate, channel setup
-
-### 🚀 Quick Start
+### Generate Configuration Files
 
 ```bash
-# Install dependencies
-npm install
+# Generate basic.ini
+curl -X POST http://localhost:3000/api/obs/basic \
+  -H "Content-Type: application/json" \
+  -d '{
+    "basic": {
+      "name": "My Profile",
+      "filenameFormatting": "%CCYY-%MM-%DD %hh-%mm-%ss",
+      "delayEnable": false,
+      "delaySec": 20,
+      "reconnect": true,
+      "retryDelay": 2,
+      "maxRetries": 25
+    },
+    "video": {
+      "baseCX": 1920,
+      "baseCY": 1080,
+      "outputCX": 1280,
+      "outputCY": 720,
+      "fpsType": 0,
+      "fpsCommon": 30,
+      "scaleType": "bicubic"
+    },
+    "audio": {
+      "sampleRate": 48000,
+      "channelSetup": "Stereo",
+      "bitrate": 160
+    }
+  }'
 
-# Start development server
-npm run dev
+# Generate service.json
+curl -X POST http://localhost:3000/api/obs/service \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "rtmp_custom",
+    "server": "srt://your-server:port",
+    "useAuth": false,
+    "key": "your-stream-key"
+  }'
 
-# Build for production
-npm run build
-
-# Start production server
-npm start
+# Generate streamEncoder.json
+curl -X POST http://localhost:3000/api/obs/encoder \
+  -H "Content-Type: application/json" \
+  -d '{
+    "bitrate": 8000,
+    "useBufsize": true,
+    "bufferSize": 2000,
+    "keyintSec": 2,
+    "profile": "main",
+    "tune": "zerolatency"
+  }'
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to access the OBS Studio Profile Generator.
-
-### 📁 API Endpoints
-
-The application includes REST API endpoints for programmatic access:
-
-- `POST /api/obs/basic` - Generate basic.ini configuration
-- `POST /api/obs/service` - Generate service.json configuration  
-- `POST /api/obs/encoder` - Generate streamEncoder.json configuration
-
-### 🌤️ Vercel Deployment
+## 🌤️ Vercel Deployment
 
 This application is optimized for deployment on Vercel:
 
-1. **Push to GitHub**: Commit your code and push to a GitHub repository
-2. **Connect to Vercel**: Import your repository on Vercel
-3. **Deploy**: Vercel will automatically detect and deploy the Next.js application
-4. **Configure**: Set up environment variables if needed
+### Automated Deployment
 
-The application is production-ready with:
-- ✅ Optimized builds
-- ✅ Static asset optimization
-- ✅ API route handling
-- ✅ Responsive design
-- ✅ Professional broadcast theme
+1. **Push to GitHub**: 
+   ```bash
+   git add .
+   git commit -m "Update OBS Profile Generator"
+   git push origin main
+   ```
 
-## 🤖 Powered by Z.ai
+2. **Connect to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import `shihan84/obs-profile-generator` repository
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+3. **Deploy**: 
+   - Vercel automatically detects Next.js
+   - Builds and deploys your application
+   - Provides a live URL (e.g., `obs-profile-generator.vercel.app`)
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+### Manual Configuration
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+If you need custom settings, create `vercel.json`:
 
-## 📁 Project Structure
-
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
-```
 
-## 🎨 Available Features & Components
+## 📋 Configuration Guide
 
-This scaffold includes a comprehensive set of modern web development tools:
+### Basic Settings
+- **Profile Name**: Display name in OBS
+- **Filename Format**: Recording file naming pattern
+- **Stream Delay**: Add delay to prevent accidental content leaks
+- **Auto Reconnect**: Automatically reconnect if connection drops
+- **Max Retries**: Number of reconnection attempts
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+### Service Settings
+- **Server URL**: Your streaming server address (e.g., `srt://server:port`)
+- **Stream Key**: Authentication key for your streaming service
+- **Authentication**: Enable if your server requires authentication
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+### Encoder Settings
+- **Bitrate**: Video bitrate in kbps (8000 recommended for 1080p)
+- **Buffer Size**: Buffer size in kbps (2000 recommended)
+- **Profile**: H.264 profile (baseline, main, high)
+- **Tuning**: Encoder tuning (zerolatency, fastdecode, film)
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+### Audio/Video Settings
+- **Base Resolution**: Your monitor/capture resolution
+- **Output Resolution**: Stream output resolution
+- **FPS**: Frames per second (30, 60 recommended)
+- **Sample Rate**: Audio quality (48kHz recommended)
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+## 🎯 Use Cases
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+### For Streamers
+- **Quick Setup**: Generate OBS profiles in seconds
+- **Multiple Profiles**: Create different profiles for different platforms
+- **Backup Configurations**: Save and share your OBS settings
+- **Team Collaboration**: Standardize settings across team members
 
-## 🤝 Get Started with Z.ai
+### For Content Creators
+- **Professional Quality**: Ensure optimal streaming settings
+- **Platform Optimization**: Different settings for YouTube, Twitch, etc.
+- **Testing**: Quickly test different configuration options
+- **Documentation**: Keep track of your preferred settings
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+### For Broadcasters
+- **Studio Integration**: Professional-grade configuration
+- **Reliability**: Tested and proven settings
+- **Compliance**: Meet platform requirements
+- **Scalability**: From small streams to large broadcasts
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork the Repository**
+2. **Create a Feature Branch**: `git checkout -b feature/amazing-feature`
+3. **Commit Changes**: `git commit -m 'Add amazing feature'`
+4. **Push to Branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+### Development Guidelines
+- Follow TypeScript best practices
+- Use the existing orange color scheme
+- Maintain responsive design
+- Test thoroughly before submitting
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **OBS Studio** - The amazing open-source streaming software
+- **Next.js** - The React framework for production
+- **shadcn/ui** - Beautiful UI components
+- **Vercel** - Seamless deployment platform
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/shihan84/obs-profile-generator/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/shihan84/obs-profile-generator/discussions)
+- **Email**: Create an issue for private communication
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**Built with ❤️ for the streaming community**  
+**Made possible by modern web technologies and open-source software**
